@@ -6,15 +6,11 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'ryanoasis/vim-devicons' 
     Plug 'morhetz/gruvbox'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
     Plug 'OmniSharp/omnisharp-vim'
-    Plug 'dense-analysis/ale'
     Plug 'itchyny/lightline.vim'
     Plug 'vhyrro/neorg' | Plug 'nvim-lua/plenary.nvim'
-    " Plug 'hrsh7th/nvim-compe'
-    " Plug 'tree-sitter/tree-sitter'
     Plug 'justinmk/vim-sneak'
-    " Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 " Everything after this line will be the config section
 

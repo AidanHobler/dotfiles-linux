@@ -135,3 +135,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Because CS 4414 prefers gcc to clang
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
