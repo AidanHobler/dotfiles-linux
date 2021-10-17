@@ -6,8 +6,8 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'ryanoasis/vim-devicons' 
     Plug 'morhetz/gruvbox'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
-    Plug 'OmniSharp/omnisharp-vim'
     Plug 'itchyny/lightline.vim'
     Plug 'vhyrro/neorg' | Plug 'nvim-lua/plenary.nvim'
     Plug 'justinmk/vim-sneak'
@@ -432,5 +432,20 @@ let g:lightline = {
   \         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
   \     }
   \ }
+
+" ****************************** fzf ****************************** 
+
+nnoremap <Leader><TAB> :Files <Enter>
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
+" [[B]Commits] Customize the options used by 'git log':
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+
+" [Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R'
+
+" [Commands] --expect expression for directly executing the command
+let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 " ****************************** END PLUGINS ****************************** 
