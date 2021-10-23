@@ -436,6 +436,7 @@ let g:lightline = {
 " ****************************** fzf ****************************** 
 
 nnoremap <Leader><TAB> :Files <Enter>
+nnoremap <Leader>l :BLines <Enter>
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
